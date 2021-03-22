@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box-1, .box-2, .box-3 {
+            height: 200px;
+            padding: 15px;
+            /* padding og border skal ikke tælle med i bredden */
+            box-sizing: border-box;
+        }
+        .box-1 {
+           background: cornflowerblue; 
+        }
+        .box-2 {
+            background: lightcoral;
+            display: none;
+        }
+        .box-3 {
+            background: yellowgreen;
+        }
+
+        /* tablet (og derover) */
+        @media screen and (min-width: 750px) {
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .box-1 {
+                width: 100%;
+            }
+            .box-2, .box-3 {
+                width: 50%;
+            }
+            .box-2 {
+                display: block;
+            }
+        }
+        
+        /* desktop */
+        @media screen and (min-width: 1050px) {
+            .container {
+                justify-content: space-around;
+            }
+            .box-1, .box-2, .box-3 {
+                width: 20%;
+            }
+            .box-3 {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-1">Hej</div>
+        <div class="box-2">med</div>
+        <div class="box-3">dig</div>
+    </div>
+</body>
+</html>
