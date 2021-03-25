@@ -2,3 +2,6 @@ h1 {
     color: green;
     font-family: georgia, serif;
 }
+.btn-warning {
+    background-color: lightcoral;
+}
